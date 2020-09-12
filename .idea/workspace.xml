@@ -3,8 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="b3ca570f-0d91-4411-b410-da4c902c2265" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/data/classical.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/country.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/edm.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/hip-hop.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/indie-pop.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/jazz.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/metal.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/pop.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/punk.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/yacht-rock.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/classical.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/country.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/edm.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/hip-hop.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/indie-pop.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/jazz.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/metal.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/pop.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/punk.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hist/yacht-rock.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/spotify_pull.py" afterPath="$PROJECT_DIR$/spotify_pull.py" />
-      <change beforePath="$PROJECT_DIR$/tracks.csv" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +37,8 @@
       <file leaf-file-name="spotify_pull.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spotify_pull.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+            <state relative-caret-position="247">
+              <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -28,6 +47,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>TOTO,AFRICA</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,7 +96,7 @@
             <path>
               <item name="SpotifySideProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpotifySideProject" type="462c0819:PsiDirectoryNode" />
-              <item name="hist" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -254,10 +278,26 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/yacht-rock.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3315">
+          <caret line="221" column="30" lean-forward="false" selection-start-line="221" selection-start-column="30" selection-end-line="221" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/country.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spotify_pull.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+        <state relative-caret-position="247">
+          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
