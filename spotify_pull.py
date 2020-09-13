@@ -23,6 +23,7 @@ for genre in genre_list:
     artist_name = []
     track_name = []
     track_id = []
+    year_array = []
 
     for year in years_list:
         for i in range(0,2000,50):
@@ -31,8 +32,9 @@ for genre in genre_list:
                 artist_name.append(t['artists'][0]['name'])
                 track_name.append(t['name'])
                 track_id.append(t['id'])
+                year_array.append(year)
 
-    df_tracks = pd.DataFrame({'artist_name': artist_name, 'track_name': track_name, 'track_id': track_id})
+    df_tracks = pd.DataFrame({'artist_name': artist_name, 'track_name': track_name, 'track_id': track_id, 'year': year_array})
 
     grouped = df_tracks.groupby(['artist_name', 'track_name'], as_index=True).size()
     print('Number of Duplicates: ' + str(grouped[grouped > 1].count()))
