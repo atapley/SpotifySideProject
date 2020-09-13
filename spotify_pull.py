@@ -32,9 +32,44 @@ for genre in genre_list:
                 track_name.append(t['name'])
                 track_id.append(t['id'])
 
-        print(str(year) + ' completed!')
+    df_tracks = pd.DataFrame({'artist_name': artist_name, 'track_name': track_name, 'track_id': track_id})
 
-    df_tracks = pd.DataFrame(
-        {'artist_name': artist_name, 'track_name': track_name, 'track_id': track_id})
-    df_tracks.to_csv('./data/' + genre + '.csv')
+    grouped = df_tracks.groupby(['artist_name', 'track_name'], as_index=True).size()
+    print('Number of Duplicates: ' + str(grouped[grouped > 1].count()))
+
+    df_tracks.drop_duplicates(subset=['artist_name', 'track_name'], inplace=True)
+    print('Removing Duplicates...')
+
+    grouped_after_dropping = df_tracks.groupby(['artist_name', 'track_name'], as_index=True).size()
+    print('Number of Duplicates: ' + str(grouped_after_dropping[grouped_after_dropping > 1].count()))
+
+    batchsize = 100
+    no_features = 0
+    features = []
+    for id in range(0, len(df_tracks['track_id']), batchsize):
+        batch = df_tracks['track_id'][id:id + batchsize]
+        feature_results = sp.audio_features(batch)
+        for i, t in enumerate(feature_results):
+            if t == None:
+                None_counter = None_counter + 1
+            else:
+                features.append(t)
+
+    print('Number of Tracks Without Features: ' + str(no_features))
+
+    df_audio_features = pd.DataFrame.from_dict(features, orient='columns')
+
+    columns_to_drop = ['analysis_url', 'track_href', 'type', 'uri']
+    df_audio_features.drop(columns_to_drop, axis=1, inplace=True)
+
+    df_audio_features.rename(columns={'id': 'track_id'}, inplace=True)
+
+    df = pd.merge(df_tracks, df_audio_features, on='track_id', how='inner')
+
+    print('Number of Rows: ' + str(len(df)))
+
+    df.to_csv('./data/' + genre + '.csv')
+
     print(genre + ' completed!')
+
+
