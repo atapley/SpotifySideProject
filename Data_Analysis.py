@@ -29,9 +29,6 @@ for genre in genre_list:
             avg = np.mean(sorted_csv[year][feature])
             averages[year][feature] = avg
 
-    with open(genre + '.json', 'w') as fp:
-        json.dump(averages, fp)
-
     fig = plt.figure(figsize=(15,15))
 
     for i, feature in enumerate(sorted_csv[str(year)].keys()):
